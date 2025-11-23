@@ -21,7 +21,7 @@ pipeline {
 
         stage('Archive Artifact') {
             steps {
-                sh 'echo "This is the build artifact" > output.txt'
+                bat 'echo "This is the build artifact" > output.txt'
                 archiveArtifacts artifacts: 'output.txt', fingerprint: true
             }
         }
